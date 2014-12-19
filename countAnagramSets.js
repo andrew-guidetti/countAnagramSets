@@ -1,9 +1,12 @@
+//Example array of words
 var words = ["dog", "case", "god", "esac", "seac", "jimbo", "ogd", "taco", "cota", "DOG"];
-//count the total number of anagram sets in an array of strings. 
+
+//count the total number of anagram sets in an array of strings. Capital and lowercase chars are considered identical
 function countAnagramSets(arrayOfWords) {
     var anagramCount = {};
     var totalCount = 0;
-    //sort the each element in the array alphabetically
+    
+    //sort each element in the array alphabetically
     for (var i in arrayOfWords) {
         //split each element up into chars, alpha sort the chars, join back into a string and lowercase the string
         arrayOfWords[i] = arrayOfWords[i].split("").sort().join("").toLowerCase();
